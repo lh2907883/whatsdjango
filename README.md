@@ -23,3 +23,8 @@
 * `app` 各个app的代码，app以文件夹名字命名 
 * `static` 网站静态资源目录
 * `widgets` 一些自定义的widget 
+
+
+### 特别主意
+
+1. 由于python是缩进严格的，所以强烈建议打开sublime的 `"translate_tabs_to_spaces": true` 和 `"draw_white_space": "all"` 设置，一定避免tab和空格混搭，否则有意想不到的惊喜噢~
