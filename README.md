@@ -15,7 +15,8 @@
 	python manage.py shell
 	# 在项目数据库环境中执行sql
 	python manage.py dbshell
-	
+	# 运行项目
+	python manage.py runserver 192.168.1.51:3535
 
 ### 项目目录结构
 
