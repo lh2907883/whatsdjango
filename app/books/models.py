@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*- 
 
+from django.db.models import Model
 from django.db import models
 from django.utils.html import format_html
 
 # Create your models here.
-class Publisher(models.Model):
+class Publisher(Model):
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=50)
     city = models.CharField(max_length=60)
@@ -55,6 +56,9 @@ class Book(models.Model):
     def save(self, *args, **kwargs):
         print 'book saved'
         super(Book, self).save(*args, **kwargs) #调用基类真正的保存
+        print self.authors
+        print self.title
+        print self.publisher
 
     def __unicode__(self):
         return self.title

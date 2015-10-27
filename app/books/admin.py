@@ -39,7 +39,7 @@ class BookAdmin(admin.ModelAdmin):
     date_hierarchy = 'publication_date' 
     search_fields = ('title', 'publisher') #搜索框要搜索的字段
     ordering = ('-publication_date',) #数据的排序规则（按publication_date倒序）
-    fields = ('title', 'authors', 'publisher', 'status') #编辑的字段（只编辑写了的，如果不设置就是所有字段都编辑）
+    # fields = ('title', 'authors', 'publisher', 'status') #编辑的字段（只编辑写了的，如果不设置就是所有字段都编辑）
     # exclude = ('publication_date',) #exclude和fields正好相反，表示除publication_date以外的字段都能编辑
     filter_horizontal = ('authors',) #使authors按照（两个多选列表的水平排列方式）编辑，只能用在多对多字段，还有垂直排列噢（用filter_vertical）
     raw_id_fields=('publisher',) #一对多的外键字段默认使用下拉框显示，但是如果下拉列表很多时可以用raw_id_fields制定用文本框显示，手动输入id（有搜索按钮告诉你出版社的id）
