@@ -14,22 +14,17 @@ class IndexAction(View):
     template_name = 'index.html'
 
     def get(self, request):
-        # subject = Publisher.objects.filter(id=subject_id, status=STATUS_ON).first()
-        # title = ''
-        # if subject:
-        #     title = subject.title
-        # context = {'title': title, 'track_env': settings.ENV_NAME}
         return render_to_response(self.template_name, {})
 
-class FindBooksJson(View):
-    def get(self, request, id=None):
-        books = Book.objects
-        if id != u'':
-            books = books.get(id=id)
-        else:
-            books = books.all()
-        print books
+class PrintAction(View):
+    def get(self, request):
+        res = 'Print request.COOKIES: <br>'
+        for k, v in request.COOKIES.items():
+            res += 'key: %s; value: %s <br>' % (k, v)
 
+        res += 'Print request.session: <br>'
+        for k, v in request.session.items():
+            res += 'key: %s; value: %s <br>' % (k, v)
 
-        response = HttpResponse()
+        response = HttpResponse(res)
         return response

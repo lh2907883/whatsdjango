@@ -7,5 +7,5 @@ urlpatterns = patterns('',
 
     url(r'^index/$', views.IndexAction.as_view()),
 
-    url(r'^findbook/(?P<id>\d*)/?$', views.FindBooksJson.as_view()),
+    url(r'^print/$', views.PrintAction.as_view()),
 )
