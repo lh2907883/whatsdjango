@@ -53,12 +53,9 @@ class Book(models.Model):
 
     #book模型的保存钩子
     #在Python中* 和 ** 有特殊含义，他们与函数有关，在函数被调用时和函数声明时有着不同的行为。此处*号不代表C/C++的指针。其中 * 表示的是元祖或是列表，而 ** 则表示字典
-    def save(self, *args, **kwargs):
-        print 'book saved'
-        super(Book, self).save(*args, **kwargs) #调用基类真正的保存
-        print self.authors
-        print self.title
-        print self.publisher
+    # def save(self, *args, **kwargs):
+    #     print 'book saved'
+    #     super(Book, self).save(*args, **kwargs) #调用基类真正的保存
 
     def __unicode__(self):
         return self.title
@@ -66,3 +63,4 @@ class Book(models.Model):
     class Meta:
         verbose_name_plural = u'书'
         verbose_name = u'书'
+
