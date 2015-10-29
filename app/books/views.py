@@ -21,10 +21,17 @@ class PrintAction(View):
         res = 'Print request.COOKIES: <br>'
         for k, v in request.COOKIES.items():
             res += 'key: %s; value: %s <br>' % (k, v)
+        res += '<br>'
 
         res += 'Print request.session: <br>'
         for k, v in request.session.items():
             res += 'key: %s; value: %s <br>' % (k, v)
+        res += '<br>'
+
+        res += 'Print request.META: <br>'
+        for k, v in request.META.items():
+            res += 'key: %s; value: %s <br>' % (k, v)
+        res += '<br>'
 
         response = HttpResponse(res)
         return response
