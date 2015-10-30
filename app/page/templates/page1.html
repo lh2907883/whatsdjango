@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf8"/>
+    <title></title>
+  </head>
+  <body>
+    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+    <script type="text/javascript">
+      alert(123)
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+      var videoSelector = {video : true};
+
+      navigator.getUserMedia(videoSelector, (function( stream ) {
+        debugger;
+        headtrackerStatus("camera found");
+        this.stream = stream;
+        if (video.mozCaptureStream) {
+          video.mozSrcObject = stream;
+        } else {
+          video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+        }
+        video.play();
+      }).bind(this), function() {
+        debugger;
+        headtrackerStatus("no camera");
+        insertAltVideo(video);
+      });
+    </script>
+  </body>
+</html>

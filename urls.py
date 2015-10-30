@@ -17,6 +17,8 @@ urlpatterns = patterns('',
 
     url(r'^books/', include('app.books.urls')),
 
+    url(r'^page/', include('app.page.urls')),
+
     # 处理静态资源
     url(r'^static/(?P<path>.*)$', 'django.contrib.staticfiles.views.serve'),
 )
