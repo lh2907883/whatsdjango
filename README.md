@@ -27,12 +27,12 @@
 * **grunt** 前端自动化环境根目录(*Gruntfile.js*在这个目录下面)
 
 ###环境准备
-1. python环境, nodejs环境, grunt-cli3. 
+1. python环境, nodejs环境, grunt-cli
 2. 准备grunt环境 
 	* cd grunt
-    * sudo npm i2. nstall    
+    * sudo npm i2. nstall
 3. 安装grunt4django
-	* sudo pip install grunt4django		
+	* sudo pip install grunt4django
 4. 项目启动
 	* cd whatsdjango
 	* python manage.py gruntserver
