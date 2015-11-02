@@ -26,5 +26,5 @@
             $('input[type="file"]', $this).change(fileChange);
         });
     });
-//django对juqery重命名了。。。
-})(django.jQuery)
+//django对juqery重命名了。。
+})(django.jQuery) 

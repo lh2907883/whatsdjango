@@ -1,3 +1,4 @@
+# coding: utf-8
 """
 Django settings for whatsthis project.
 
@@ -29,20 +30,21 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
-INSTALLED_APPS = (
+# 
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'grunt4django',
     'django.contrib.staticfiles',
     'app.test1',
     'app.books',
     'app.page',
-)
+]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -50,7 +52,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-)
+    'grunt4django.middleware.LiveReloadMiddleware',
+]
+
+# grunt目录（这个目录是相对于settings.py文件的 ）
+GRUNT_DIR = '../grunt'
 
 ROOT_URLCONF = 'urls'
 

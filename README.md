@@ -20,9 +20,28 @@
 
 ### 项目目录结构
 
-* `app` 各个app的代码，app以文件夹名字命名 
-* `static` 网站静态资源目录
-* `widgets` 一些自定义的widget 
+* **whatsdjango/app** 各个app的代码，app以文件夹名字命名 
+* **whatsdjango/static** 网站静态资源目录
+* **whatsdjango/widgets** 一些自定义的widget 
+* **whatsdjango/devstatic** 调试时的静态资源目录(原始js,css代码的存放位置, `grunt export`命令会把静态资源的min版本copy到**whatsdjango/static**供页面使用)
+* **grunt** 前端自动化环境根目录(*Gruntfile.js*在这个目录下面)
+
+###环境准备
+1. python环境, nodejs环境, grunt-cli
+2.
+		
+		# 准备grunt环境
+ 		cd grunt
+ 		sudo npm install
+3.
+		
+		# 安装grunt4django
+		sudo pip install grunt4django
+4.
+		
+		# 项目启动
+		cd whatsdjango
+		python manage.py gruntserver
 
 
 ### 特别主意
